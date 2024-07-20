@@ -1,4 +1,5 @@
 # THNK Simplified
+![alt text](https://github.com/Kravataf/THNK-Simplified/blob/main/banner.png)
 Extension to make using THNK simpler and easier
 
 # Installation
