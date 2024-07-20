@@ -8,7 +8,7 @@
   "name": "THNK_Simplified",
   "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/UI Essentials/4997aa72823fb412175979df6999892300bafcfbb66df66888561abd3b44050c_UI Essentials_upload.svg",
   "shortDescription": "makes THNK a little bit easier to use",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "adds few functions that make making multiplayer using THNK faster and little bit simpler",
   "tags": [
     "multiplayer",
@@ -52,7 +52,7 @@
                 "Player",
                 "Owner",
                 "=",
-                "THNK::CurrentPlayer()"
+                "THNK::PickedPlayer()"
               ]
             },
             {
@@ -113,7 +113,7 @@
                 "Player",
                 "Owner",
                 "=",
-                "THNK::CurrentPlayer()"
+                "THNK::PickedPlayer()"
               ]
             }
           ],
