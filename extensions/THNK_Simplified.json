@@ -8,7 +8,7 @@
   "name": "THNK_Simplified",
   "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/UI Essentials/4997aa72823fb412175979df6999892300bafcfbb66df66888561abd3b44050c_UI Essentials_upload.svg",
   "shortDescription": "makes THNK a little bit easier to use",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "adds few functions that make making multiplayer using THNK faster and little bit simpler",
   "tags": [
     "multiplayer",
@@ -250,38 +250,8 @@
         }
       ],
       "objectGroups": []
-    },
-    {
-      "fullName": "inputPressed",
-      "functionType": "Expression",
-      "name": "inputPressed",
-      "sentence": "",
-      "events": [],
-      "expressionType": {
-        "type": "expression"
-      },
-      "parameters": [
-        {
-          "defaultValue": "False",
-          "description": "",
-          "name": "inputPressed",
-          "optional": true,
-          "type": "trueorfalse"
-        }
-      ],
-      "objectGroups": []
     }
   ],
-  "eventsBasedBehaviors": [
-    {
-      "description": "",
-      "fullName": "Synchronize object (Simplified)",
-      "name": "SynchronizedObjectSimple",
-      "objectType": "",
-      "eventsFunctions": [],
-      "propertyDescriptors": [],
-      "sharedPropertyDescriptors": []
-    }
-  ],
+  "eventsBasedBehaviors": [],
   "eventsBasedObjects": []
 }
