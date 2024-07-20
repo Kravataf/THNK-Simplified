@@ -1,0 +1,287 @@
+{
+  "author": "",
+  "category": "Advanced",
+  "extensionNamespace": "",
+  "fullName": "THNK Simplified",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMjAuNyw3LjNsLTQtNGMtMC4xLTAuMS0wLjItMC4yLTAuMy0wLjJjLTAuMi0wLjEtMC41LTAuMS0wLjgsMGMtMC4xLDAuMS0wLjIsMC4xLTAuMywwLjJsLTQsNGMtMC40LDAuNC0wLjQsMSwwLDEuNA0KCXMxLDAuNCwxLjQsMEwxNSw2LjRWMjBjMCwwLjYsMC40LDEsMSwxczEtMC40LDEtMVY2LjRsMi4zLDIuM0MxOS41LDguOSwxOS43LDksMjAsOXMwLjUtMC4xLDAuNy0wLjNDMjEuMSw4LjMsMjEuMSw3LjcsMjAuNyw3LjN6Ig0KCS8+DQo8cGF0aCBkPSJNMjkuNSwxNS42bC02LTMuNWMtMC4xLDAtMC4yLTAuMS0wLjItMC4xTDIxLDEwLjhjLTAuNywwLjItMS40LDAuMy0yLDBWMjBjMCwxLjctMS4zLDMtMywzcy0zLTEuMy0zLTN2LTkuMg0KCWMtMC43LDAuMi0xLjQsMC4yLTIsMGwtMi4yLDEuM2MtMC4xLDAtMC4yLDAuMS0wLjIsMC4xbC02LDMuNUMyLjIsMTUuOCwyLDE2LjEsMiwxNi41djB2NXYwYzAsMC40LDAuMiwwLjcsMC41LDAuOWw2LDMuNQ0KCWMwLjEsMCwwLjIsMC4xLDAuMiwwLjFsNi44LDMuOUMxNS43LDMwLDE1LjgsMzAsMTYsMzBzMC4zLDAsMC41LTAuMWw2LjgtMy45YzAuMSwwLDAuMi0wLjEsMC4yLTAuMWw2LTMuNWMwLjMtMC4yLDAuNS0wLjUsMC41LTAuOQ0KCXYwdi01djBDMzAsMTYuMSwyOS44LDE1LjgsMjkuNSwxNS42eiIvPg0KPC9zdmc+DQo=",
+  "name": "THNK_Simplified",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/UI Essentials/4997aa72823fb412175979df6999892300bafcfbb66df66888561abd3b44050c_UI Essentials_upload.svg",
+  "shortDescription": "makes THNK a little bit easier to use",
+  "version": "0.0.1",
+  "description": "adds few functions that make making multiplayer using THNK faster and little bit simpler",
+  "tags": [
+    "multiplayer",
+    "thnk"
+  ],
+  "authorIds": [
+    "RSeNCxLJD2N3iBVerJci9hztlNp2"
+  ],
+  "dependencies": [],
+  "globalVariables": [],
+  "sceneVariables": [],
+  "eventsFunctions": [
+    {
+      "description": "Spawn _PARAM1_ on _PARAM2_;_PARAM3_",
+      "fullName": "Spawn player on spawnpoint",
+      "functionType": "Action",
+      "name": "SpawnPlayer",
+      "sentence": "Spawn _PARAM1_ on _PARAM2_;_PARAM3_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Player",
+                "X",
+                "Y",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Player",
+                "Owner",
+                "=",
+                "THNK::CurrentPlayer()"
+              ]
+            },
+            {
+              "type": {
+                "value": "THNK::LinkObjectToPlayer"
+              },
+              "parameters": [
+                "",
+                "Player",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Player",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "X",
+          "type": "expression"
+        },
+        {
+          "description": "",
+          "name": "Y",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "fullName": "The current client has disconnected",
+      "functionType": "Condition",
+      "name": "CurrentClientDisconnected",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "THNK::OnClientDisconnect"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Player",
+                "Owner",
+                "=",
+                "THNK::CurrentPlayer()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Player",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Send message to server that _PARAM_ was _PARAM2_ on current client",
+      "fullName": "Send message of input pressed",
+      "functionType": "Action",
+      "name": "InputPressed",
+      "sentence": "Send message to server that _PARAM1_ was _PARAM2_ on current client",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "THNK::SendMessage"
+              },
+              "parameters": [
+                "",
+                "input",
+                "pressed",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "input",
+          "type": "string"
+        },
+        {
+          "defaultValue": "yes",
+          "description": "",
+          "name": "pressed",
+          "optional": true,
+          "type": "yesorno"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "fullName": "When message of input is received",
+      "functionType": "Condition",
+      "name": "InputReceived",
+      "sentence": "When input of type _PARAM1_ is pressed (_PARAM2_) by _PARAM3_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "THNK::OnMessage"
+              },
+              "parameters": [
+                "",
+                "input",
+                "pressed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "THNK::UseLinkedObjects"
+              },
+              "parameters": [
+                "RedHero",
+                "player",
+                "="
+              ]
+            },
+            {
+              "type": {
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "\"pressed\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "input",
+          "type": "string"
+        },
+        {
+          "defaultValue": "yes",
+          "description": "",
+          "name": "pressed",
+          "optional": true,
+          "type": "yesorno"
+        },
+        {
+          "description": "",
+          "name": "player",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "fullName": "inputPressed",
+      "functionType": "Expression",
+      "name": "inputPressed",
+      "sentence": "",
+      "events": [],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [
+        {
+          "defaultValue": "False",
+          "description": "",
+          "name": "inputPressed",
+          "optional": true,
+          "type": "trueorfalse"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "Synchronize object (Simplified)",
+      "name": "SynchronizedObjectSimple",
+      "objectType": "",
+      "eventsFunctions": [],
+      "propertyDescriptors": [],
+      "sharedPropertyDescriptors": []
+    }
+  ],
+  "eventsBasedObjects": []
+}
